@@ -1,10 +1,7 @@
-import Button from "./components/Button/Button.js";
-import Player from "./components/Player/Player.js";
-import { initialPreviousGames } from "./historyDB.js";
-import History from "./components/History/History.js";
-import Form from "./components/Form/Form.js";
 import { Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation.js";
+import HomePage from "./pages/HomePage.js";
+import HistoryPage from "./pages/HistoryPage.js";
 
 const players = [
   {
@@ -37,35 +34,8 @@ function App() {
       </heading>
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <h2>Game</h2>
-
-                {players.map((player) => (
-                  <Player
-                    key={player.id}
-                    name={player.name}
-                    score={player.score}
-                  />
-                ))}
-                <Button>End game</Button>
-                <Form></Form>
-              </>
-            }
-          />
-          <Route
-            path="/history"
-            element={
-              <>
-                <h2>Previous Games</h2>
-                {initialPreviousGames.map((game) => (
-                  <History key={game.id} game={game} />
-                ))}
-              </>
-            }
-          />
+          <Route path="/" element={<HomePage players={players} />} />
+          <Route path="/history" element={<HistoryPage />} />
         </Routes>
       </main>
       <Navigation />

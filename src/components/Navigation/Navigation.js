@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Navigation() {
@@ -14,13 +14,20 @@ const Nav = styled.nav`
   display: flex;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   flex: 1;
-  background: lightseagreen;
+  background: darkgray;
   text-decoration: none;
   color: white;
   padding: 15px;
   display: grid;
   place-items: center;
   border-radius: 15px;
+
+  &.active {
+    background-color: darkslateblue;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
 `;
