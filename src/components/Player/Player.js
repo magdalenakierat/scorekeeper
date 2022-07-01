@@ -26,3 +26,28 @@ const PlayerWrapper = styled.section`
   justify-content: space-between;
   margin: 1rem;
 `;
+
+// import styled from "styled-components";
+
+// export default function Player({
+//   name,
+//   score,
+//   onIncrementPlayerScore,
+//   onDecrementPlayerScore,
+// }) {
+//   return (
+//     <Wrapper>
+//       <Name>{name}</Name>
+//       <ButtonMinus
+//         aria-label="Decrement Score"
+//         onClick={onDecrementPlayerScore}
+//       >
+//         -
+//       </ButtonMinus>
+//       <Score>{score}</Score>
+//       <ButtonPlus aria-label="Increment Score" onClick={onIncrementPlayerScore}>
+//         +
+//       </ButtonPlus>
+//     </Wrapper>
+//   );
+// }

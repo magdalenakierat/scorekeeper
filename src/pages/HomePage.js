@@ -8,7 +8,7 @@ export default function HomePage({ players }) {
       <h2>Game</h2>
 
       {players.map((player) => (
-        <Player key={player.id} name={player.name} score={player.score} />
+        <Player key={player.id} name={player.name} />
       ))}
       <Button>End game</Button>
       <Form></Form>
