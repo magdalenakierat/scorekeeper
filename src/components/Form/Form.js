@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 export default function Form() {
   return (
     <FormWrapper>
-      <label for="name">Name of player</label>
+      <label htmlFor="name">Name of player</label>
       <input type="text" id="name" />
       <Button background="green">Add player</Button>
     </FormWrapper>

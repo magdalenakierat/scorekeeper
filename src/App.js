@@ -29,9 +29,9 @@ const players = [
 function App() {
   return (
     <>
-      <heading>
+      <header>
         <h1>Score keeper</h1>
-      </heading>
+      </header>
       <main>
         <Routes>
           <Route path="/" element={<HomePage players={players} />} />
