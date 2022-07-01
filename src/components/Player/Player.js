@@ -1,27 +1,16 @@
 import styled from "styled-components";
+import Counter from "../Counter/Counter";
 
-export default function Player({ name, score }) {
+export default function Player({ name }) {
   return (
     <PlayerWrapper>
       {name}
       <PlayerScore>
-        <Button type="button" aria-label="Decrease score">
-          -
-        </Button>
-        <span>{score}</span>
-        <Button type="button" aria-label="Increase score">
-          +
-        </Button>
+        <Counter />
       </PlayerScore>
     </PlayerWrapper>
   );
 }
-
-const Button = styled.button`
-  background-color: green;
-  border-radius: 10px;
-  padding: 0 10px;
-`;
 
 const PlayerScore = styled.div`
   color: black;
@@ -38,9 +27,27 @@ const PlayerWrapper = styled.section`
   margin: 1rem;
 `;
 
-// export const PlayerWrapper = styled.section`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin: 1rem;
-// `;
+// import styled from "styled-components";
+
+// export default function Player({
+//   name,
+//   score,
+//   onIncrementPlayerScore,
+//   onDecrementPlayerScore,
+// }) {
+//   return (
+//     <Wrapper>
+//       <Name>{name}</Name>
+//       <ButtonMinus
+//         aria-label="Decrement Score"
+//         onClick={onDecrementPlayerScore}
+//       >
+//         -
+//       </ButtonMinus>
+//       <Score>{score}</Score>
+//       <ButtonPlus aria-label="Increment Score" onClick={onIncrementPlayerScore}>
+//         +
+//       </ButtonPlus>
+//     </Wrapper>
+//   );
+// }
